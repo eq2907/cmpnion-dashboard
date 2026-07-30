@@ -94,7 +94,7 @@ function App() {
           <div className="md:hidden items-center gap-4">
             <button
               onClick={() => setIsMobileMenuOpen(true)}
-              className="relative p-2 text-slate-400 hover:bg-slate-100 rounded-full transition-colors"
+              className="relative text-slate-400 hover:bg-slate-100 rounded-full transition-colors"
             >
               <Menu size={20} />
             </button>
@@ -102,8 +102,8 @@ function App() {
         </header>
 
         {/* Page Content */}
-        <main className="flex-1 overflow-auto p-6 md:p-8">
-          <div className="max-w-7xl mx-auto h-full">
+        <main className="flex-1 overflow-auto">
+          <div className="h-full">
             <Routes>
               <Route path="/" element={<Dashboard />} />
               <Route path="/orders" element={<Orders />} />

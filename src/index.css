@@ -10,13 +10,31 @@ body {
   @apply bg-slate-50 text-slate-900;
 }
 
+@layer base {
+  select {
+    @apply appearance-none border border-slate-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-accent;
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 20 20'%3e%3cpath stroke='%23999999' stroke-linecap='round' stroke-linejoin='round' stroke-width='1.5' d='M6 8l4 4 4-4'/%3e%3c/svg%3e");
+    background-position: right 0.45rem center;
+    background-repeat: no-repeat;
+    background-size: 1.2em 1.2em;
+  }
+}
+
 @layer utilities {
   .fade-in {
-    animation: fadeIn 0.4s ease-out;
+    animation: fadeIn 0.4s ease-out both;
+  }
+
+  .fade-out {
+    animation: fadeOut 0.3s ease-in both;
   }
 
   .slide-in-right {
-    animation: slideInRight 0.3s ease-out;
+    animation: slideInRight 0.3s ease-out both;
+  }
+
+  .slide-out-right {
+    animation: slideOutRight 0.3s ease-in both;
   }
 }
 
@@ -41,5 +59,27 @@ body {
   to {
     opacity: 1;
     transform: translateX(0);
+  }
+}
+
+@keyframes fadeOut {
+  from {
+    opacity: 1;
+  }
+
+  to {
+    opacity: 0;
+  }
+}
+
+@keyframes slideOutRight {
+  from {
+    opacity: 1;
+    transform: translateX(0);
+  }
+
+  to {
+    opacity: 0;
+    transform: translateX(100%);
   }
 }
