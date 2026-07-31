@@ -103,7 +103,7 @@ function App() {
 
         {/* Page Content */}
         <main className="flex-1 overflow-auto">
-          <div className="h-full">
+          <div className="h-full pl-4 lg:pl-5 pr-4 mt-6">
             <Routes>
               <Route path="/" element={<Dashboard />} />
               <Route path="/orders" element={<Orders />} />

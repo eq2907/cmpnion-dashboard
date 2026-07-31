@@ -98,8 +98,8 @@ const Orders = () => {
     <div className="h-full flex flex-col fade-in">
 
       {/* Orders List */}
-      <div className='w-full lg:mx-auto pl-4 lg:pl-5 pr-4 h-full'>
-        <div className='mt-6'>
+      <div className='w-full h-full'>
+        <div>
           <div>
             <h1 className="text-2xl font-bold text-slate-900">Order Management</h1>
             <p className="text-slate-500 mt-1">Manage and track guest requests.</p>
